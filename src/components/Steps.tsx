@@ -32,7 +32,7 @@ export default function Steps({ onOpen }: StepsProps) {
                             Termin vereinbaren
                         </h3>
                         <p className="text-white/90 leading-relaxed text-base md:text-lg">
-                            Wähle deinen unverbindlichen Wunschtermin für ein 15-Minuten-Strategiegespräch.
+                            Trag dich im Kontaktformular ein. Unser Finanzexperte Steffen Grocholl meldet sich zeitnah, um dein persönliches Beratungsgespräch zu planen.
                         </p>
                     </div>
 
@@ -46,7 +46,7 @@ export default function Steps({ onOpen }: StepsProps) {
                             Depot eröffnen
                         </h3>
                         <p className="text-white/90 leading-relaxed text-base md:text-lg">
-                            Du eröffnest – selbstständig oder gemeinsam mit uns – dein neues, professionell verwaltetes Depot.
+                            Nach der Beratung eröffnest du dein professionell verwaltetes Depot – ganz einfach selbstständig oder gemeinsam mit uns.
                         </p>
                     </div>
 
@@ -60,7 +60,7 @@ export default function Steps({ onOpen }: StepsProps) {
                             Vertragsvorteil sichern
                         </h3>
                         <p className="text-white/90 leading-relaxed text-base md:text-lg">
-                            Sobald dein Depot aktiv ist, erhältst du deine exklusiven Sonderkonditionen für das Liberty Powerhouse und kannst unkompliziert in dein Training starten.
+                            Sobald dein Depot aktiv ist, erhältst du deinen exklusiven Liberty Powerhouse Rabatt – für Neuverträge oder deine bestehende Mitgliedschaft.
                         </p>
                     </div>
 
