@@ -101,7 +101,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                 </svg>
               </div>
               <p className="text-gray-700 text-center text-lg font-medium leading-relaxed">
-                Vielen Dank! Wir haben deine Anfrage erhalten. Steffen Grocholl wird sich in Kürze bei dir melden.
+                Vielen Dank! Wir haben deine Anfrage erhalten. Unser Finanzexperte Steffen Grocholl wird sich in Kürze bei dir melden.
               </p>
               <button 
                 onClick={onClose}
