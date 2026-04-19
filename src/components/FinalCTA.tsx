@@ -22,7 +22,7 @@ export default function FinalCTA({ onOpen }: { onOpen: () => void }) {
         <div className="shrink-0 w-full md:w-auto">
             <button
               onClick={onOpen}
-              className="w-full md:w-auto btn-shine bg-[#D4AF37] hover:bg-[#F1D36C] text-[#1B3660] font-bold text-lg px-10 py-5 rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_15px_30px_rgba(212,175,55,0.3)] cursor-pointer whitespace-nowrap"
+              className="w-full md:max-w-xs lg:max-w-sm btn-shine bg-[#D4AF37] hover:bg-[#F1D36C] text-[#1B3660] font-bold text-lg px-8 py-5 rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_15px_30px_rgba(212,175,55,0.3)] cursor-pointer text-center"
             >
               Jetzt Beratungstermin vereinbaren
             </button>

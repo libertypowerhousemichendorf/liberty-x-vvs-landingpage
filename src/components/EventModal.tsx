@@ -36,19 +36,19 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
       />
       
       {/* The Target Card Wrapper */}
-      <div className="relative w-full max-w-md mx-auto z-[1000000] scale-100 opacity-100 transform transition-all animate-in fade-in zoom-in-95 duration-300">
+      <div className="relative w-full max-w-md mx-auto z-[1000000] scale-100 opacity-100 transform transition-all animate-in fade-in zoom-in-95 duration-300 max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl">
         
-        {/* Close Button Outside (Gold) */}
+        {/* Close Button (Fixed positioning for mobile visibility) */}
         <button 
           onClick={onClose}
-          className="absolute -top-12 md:-top-14 right-0 text-[#D4AF37] hover:text-[#b09028] text-4xl leading-none font-light transition-transform hover:scale-110 p-2 cursor-pointer"
+          className="fixed top-6 right-6 md:top-6 md:right-8 z-[1000001] text-[#D4AF37] hover:text-[#b09028] text-4xl leading-none font-light transition-transform hover:scale-110 p-2 cursor-pointer bg-white/10 backdrop-blur-md rounded-full"
           aria-label="Schließen"
         >
           ×
         </button>
 
         {/* The White Card */}
-        <div className="bg-white rounded-[2rem] shadow-2xl p-8 md:p-10 flex flex-col items-center">
+        <div className="bg-white p-8 md:p-10 flex flex-col items-center">
           
           {/* Header */}
           <h2 className="text-2xl md:text-3xl font-bold text-[#1B3660] text-center leading-tight mb-3">
