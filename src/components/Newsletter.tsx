@@ -12,7 +12,7 @@ export default function Newsletter() {
     };
 
     return (
-        <section className="w-full bg-[#F4F2EE] px-4 sm:px-6 py-24 md:py-32">
+        <section className="relative w-full bg-[#F4F2EE] px-4 sm:px-6 pt-48 pb-24 md:py-32 -mt-12 md:mt-0 z-0">
             <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 p-8 sm:p-12 md:p-16 flex flex-col items-center text-center gap-8 md:gap-10">
                 
                 {/* Text */}

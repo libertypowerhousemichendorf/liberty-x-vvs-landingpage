@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function StoryTrust() {
   return (
     <section className="w-full bg-white py-20 md:py-28 px-6">
@@ -9,7 +11,7 @@ export default function StoryTrust() {
             Wahre Stärke beginnt bei der Gesundheit – körperlich und finanziell.
           </h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            <span className="font-bold text-[#1B3660]">Dein Workout zahlt sich aus. Dein Geld auch?</span> Wir glauben: Wer in seinen Körper investiert, sollte auch sein Vermögen trainieren. Baue mit den Experten vom Dr. Winter Team professionell dein Depot auf und profitiere von jahrzehntelanger Börsenerfahrung.
+            <span className="font-bold text-[#1B3660]">Dein Workout zahlt sich aus. Dein Geld&nbsp;auch?</span> Wir glauben: Wer in seinen Körper investiert, sollte auch sein Vermögen trainieren. Baue mit den Experten vom Dr. Winter, Grocholl Team professionell dein Depot auf und profitiere von jahrzehntelanger Börsenerfahrung.
           </p>
         </div>
 
@@ -18,7 +20,7 @@ export default function StoryTrust() {
 
           {/* Pillar 1: Expertise */}
           <div className="flex flex-col items-center text-center group">
-            <div className="mb-6 bg-white p-5 rounded-2xl shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+            <div className="mb-6 bg-amber-50 p-5 rounded-2xl shadow-md shadow-amber-100 transition-transform duration-300 group-hover:-translate-y-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-[#D4AF37]">
                 <circle cx="12" cy="8" r="6" />
                 <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
@@ -28,14 +30,13 @@ export default function StoryTrust() {
               Über 35 Jahre Expertise
             </h3>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Verlasse dich auf jahrzehntelange Börsenerfahrung. Deine Strategie und Betreuung
-              erfolgt durch Dr. Petra Winter und Steffen Grocholl.
+              Deine Strategie und Betreuung übernehmen Dr. Petra Winter und Steffen Grocholl persönlich – Finanzexperten mit über 35 Jahren gemeinsamer Börsenerfahrung.
             </p>
           </div>
 
           {/* Pillar 2: Security */}
           <div className="flex flex-col items-center text-center group">
-            <div className="mb-6 bg-white p-5 rounded-2xl shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+            <div className="mb-6 bg-amber-50 p-5 rounded-2xl shadow-md shadow-amber-100 transition-transform duration-300 group-hover:-translate-y-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-[#D4AF37]">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
                 <path d="m9 12 2 2 4-4" />
@@ -45,13 +46,24 @@ export default function StoryTrust() {
               Sicherheit auf Banken-Niveau
             </h3>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Durch unsere Kooperation mit der Bank für Vermögen (BfV) AG investierst du nach strengen institutionellen Standards: 100% rechtssichere Depotführung und maximale Transparenz.
+              Dank unserer Kooperation mit der Bank für Vermögen (BfV) AG investierst du nach höchsten institutionellen Standards: 100 % rechtssicher und maximal transparent.
             </p>
+            {/* BfV Trust Badge */}
+            <div className="mt-6 flex flex-col items-center gap-1.5">
+              <p className="text-[10px] text-gray-400 uppercase tracking-widest">Unser Kooperationspartner</p>
+              <Image
+                src="/logos/bfv-logo.png"
+                alt="Bank für Vermögen"
+                width={110}
+                height={36}
+                className="h-8 w-auto opacity-90"
+              />
+            </div>
           </div>
 
           {/* Pillar 3: Performance */}
           <div className="flex flex-col items-center text-center group">
-            <div className="mb-6 bg-white p-5 rounded-2xl shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+            <div className="mb-6 bg-amber-50 p-5 rounded-2xl shadow-md shadow-amber-100 transition-transform duration-300 group-hover:-translate-y-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-[#D4AF37]">
                 <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
                 <polyline points="16 7 22 7 22 13"></polyline>
@@ -61,7 +73,7 @@ export default function StoryTrust() {
               Bewiesene Strategie
             </h3>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Profitiere von Strategien, die performen: +67,5 % Rendite in 28 Monaten (Stand 03/2026).
+              Profitiere von Anlageransätzen, die messbar performen: Unsere „Future I“ Strategie erzielte bereits +67,5 % Rendite in nur 28 Monaten (Stand 03/2026).
             </p>
           </div>
 

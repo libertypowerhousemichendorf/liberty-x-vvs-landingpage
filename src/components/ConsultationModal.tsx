@@ -9,6 +9,7 @@ interface ConsultationModalProps {
 
 export default function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
   const [mounted, setMounted] = useState(false);
+  const [isExistingMember, setIsExistingMember] = useState(false);
 
   useEffect(() => {
     // requestAnimationFrame bypasses the strict Next/React "setState synchronously inside effect" linter warning cleanly
@@ -100,6 +101,26 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
               <label htmlFor="dsgvo" className="text-xs text-gray-500 cursor-pointer pt-0.5">
                 Ich akzeptiere die Datenschutzerklärung*
               </label>
+            </div>
+            {/* Existing Member Checkbox */}
+            <div className="flex flex-col gap-1 mt-1 px-1">
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="existingMember"
+                  checked={isExistingMember}
+                  onChange={(e) => setIsExistingMember(e.target.checked)}
+                  className="mt-1 w-4 h-4 shrink-0 text-[#D4AF37] border-gray-300 rounded focus:ring-[#D4AF37] cursor-pointer accent-[#D4AF37]"
+                />
+                <div className="flex flex-col gap-0.5">
+                  <label htmlFor="existingMember" className="text-xs text-gray-500 cursor-pointer pt-0.5">
+                    Ich bin bereits Mitglied im Liberty Powerhouse
+                  </label>
+                  <p className="text-xs text-gray-400 leading-relaxed">
+                    Falls angehakt, wird dein Rabatt direkt im bestehenden Profil hinterlegt.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Submit Button */}

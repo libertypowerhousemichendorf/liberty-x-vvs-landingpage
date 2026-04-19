@@ -52,7 +52,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
           
           {/* Header */}
           <h2 className="text-2xl md:text-3xl font-bold text-[#1B3660] text-center leading-tight mb-3">
-            Platz für den Info-Vortrag sichern
+            Unsere Experten-Vorträge
           </h2>
           <p className="text-gray-600 text-center text-sm mb-8 leading-relaxed">
             Trage deine Daten ein, um dir einen der limitierten Plätze zu sichern. Die Teilnahme ist kostenlos.
@@ -107,7 +107,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
               type="submit" 
               className="w-full bg-[#D4AF37] hover:bg-[#b09028] text-[#1B3660] font-extrabold text-lg py-5 rounded-xl shadow-md hover:shadow-lg transform transition-all hover:scale-[1.02] active:scale-95 mt-4"
             >
-              Verbindlich anmelden
+              Platz sichern
             </button>
             
             {/* Footnote */}

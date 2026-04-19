@@ -2,7 +2,7 @@
 
 export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
   return (
-    <section className="w-full bg-white py-24 px-6">
+    <section className="w-full bg-gray-50 py-24 px-6">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
 
         <h2 className="text-3xl md:text-4xl font-bold text-[#1B3660] text-center mb-12">
@@ -11,7 +11,7 @@ export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
 
         <div className="flex flex-col gap-4 w-full">
           {/* FAQ Item 1 */}
-          <details className="bg-white rounded-xl shadow-sm group [&_summary::-webkit-details-marker]:hidden">
+          <details className="bg-white rounded-xl border border-gray-100 shadow-sm group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex items-center justify-between p-6 cursor-pointer text-[#1B3660] font-semibold text-lg outline-none select-none">
               <span>Wie sieht der regulatorische Rahmen für mein Depot aus?</span>
               <span className="text-[#D4AF37] transition-transform duration-300 group-open:rotate-180">
@@ -26,7 +26,7 @@ export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
           </details>
 
           {/* FAQ Item 2 */}
-          <details className="bg-white rounded-xl shadow-sm group [&_summary::-webkit-details-marker]:hidden">
+          <details className="bg-white rounded-xl border border-gray-100 shadow-sm group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex items-center justify-between p-6 cursor-pointer text-[#1B3660] font-semibold text-lg outline-none select-none">
               <span>Gibt es Voraussetzungen für die Eröffnung eines Depots?</span>
               <span className="text-[#D4AF37] transition-transform duration-300 group-open:rotate-180">
@@ -41,7 +41,7 @@ export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
           </details>
 
           {/* FAQ Item 3 */}
-          <details className="bg-white rounded-xl shadow-sm group [&_summary::-webkit-details-marker]:hidden">
+          <details className="bg-white rounded-xl border border-gray-100 shadow-sm group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex items-center justify-between p-6 cursor-pointer text-[#1B3660] font-semibold text-lg outline-none select-none">
               <span>Brauche ich Vorkenntnisse im Bereich Finanzen?</span>
               <span className="text-[#D4AF37] transition-transform duration-300 group-open:rotate-180">
@@ -56,7 +56,7 @@ export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
           </details>
 
           {/* FAQ Item 4 */}
-          <details className="bg-white rounded-xl shadow-sm group [&_summary::-webkit-details-marker]:hidden">
+          <details className="bg-white rounded-xl border border-gray-100 shadow-sm group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex items-center justify-between p-6 cursor-pointer text-[#1B3660] font-semibold text-lg outline-none select-none">
               <span>Wie erhalte ich die exklusiven Vertragsvorteile im Liberty Powerhouse?</span>
               <span className="text-[#D4AF37] transition-transform duration-300 group-open:rotate-180">
@@ -71,7 +71,7 @@ export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
           </details>
 
           {/* FAQ Item 5 */}
-          <details className="bg-white rounded-xl shadow-sm group [&_summary::-webkit-details-marker]:hidden">
+          <details className="bg-white rounded-xl border border-gray-100 shadow-sm group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex items-center justify-between p-6 cursor-pointer text-[#1B3660] font-semibold text-lg outline-none select-none">
               <span>Gilt das Angebot auch für bestehende Mitglieder?</span>
               <span className="text-[#D4AF37] transition-transform duration-300 group-open:rotate-180">
@@ -87,7 +87,7 @@ export default function FaqCTA({ onOpen }: { onOpen: () => void }) {
         </div>
 
         {/* Exit Ramp CTA */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-12 mb-16 md:mb-0">
           <button
             onClick={onOpen}
             className="btn-shine bg-[#D4AF37] text-[#1B3660] hover:bg-[#F1D36C] hover:text-[#1B3660] font-bold text-lg md:text-xl px-12 py-4 rounded-full transition-colors duration-500 shadow-[0_15px_30px_rgba(0,0,0,0.12)] tracking-wide cursor-pointer"
