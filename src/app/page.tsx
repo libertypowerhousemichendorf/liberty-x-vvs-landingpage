@@ -1,5 +1,5 @@
-{/* build-trigger: 2026-04-19 */}
 "use client";
+{/* build-trigger: 2026-04-19 */}
 
 import { useState } from "react";
 import Hero from "@/components/Hero";
