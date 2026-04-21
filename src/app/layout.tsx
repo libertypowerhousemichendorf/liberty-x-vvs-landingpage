@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dr. Winter & Grocholl Team x Liberty Powerhouse",
+  title: "Dr. Winter Grocholl Team | Exklusive VVS-Aktion",
   description: "Cross-Marketing-Kampagne: Depot eröffnen & 50% auf Fitnessstudio-Mitgliedschaft sichern.",
 };
 

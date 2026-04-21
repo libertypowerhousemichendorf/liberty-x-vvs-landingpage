@@ -42,7 +42,7 @@ export default function Events({ onOpenEvent }: { onOpenEvent: () => void }) {
                                         Unsere Experten-Vorträge
                                     </h2>
                                     <p className="text-2xl md:text-3xl font-bold text-[#D4AF37] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] mt-4 md:mt-6">
-                                        Experten-Wissen hautnah
+                                        Fachwissen hautnah erleben
                                     </p>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@ export default function Events({ onOpenEvent }: { onOpenEvent: () => void }) {
                                     Unsere Experten-Vorträge
                                 </h2>
                                 <p className="text-lg font-bold text-[#D4AF37] mt-3">
-                                    Experten-Wissen hautnah
+                                    Fachwissen hautnah erleben
                                 </p>
                             </div>
 

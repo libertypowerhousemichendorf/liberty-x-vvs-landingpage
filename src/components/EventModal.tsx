@@ -21,15 +21,17 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
     setStatus('submitting');
 
     const payload = {
-      firstname: firstName,
-      lastname: lastName,
+      vorname: firstName,
+      nachname: lastName,
       email: email,
-      phone: phone,
-      isMember: isExistingMember
+      telefon: phone,
+      ist_mitglied: isExistingMember,
+      vortrag_datum: "06.05.2026",
+      vortrag_uhrzeit: "18:30 Uhr"
     };
 
     try {
-      const response = await fetch('https://drwintergrochollteam.app.n8n.cloud/webhook-test/liberty-vvs-lead-intake', {
+      const response = await fetch('https://drwintergrochollteam.app.n8n.cloud/webhook/vortrag-anmeldung', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -121,6 +123,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                 
                 <input 
                   type="text" 
+                  name="vorname"
                   placeholder="Vorname*" 
                   required 
                   value={firstName}
@@ -130,6 +133,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                 
                 <input 
                   type="text" 
+                  name="nachname"
                   placeholder="Nachname*" 
                   required 
                   value={lastName}
@@ -139,6 +143,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                 
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="Deine E-Mail Adresse*" 
                   required 
                   value={email}
@@ -148,6 +153,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                 
                 <input 
                   type="tel" 
+                  name="telefon"
                   placeholder="Telefon*" 
                   required 
                   value={phone}
@@ -174,6 +180,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                     <input
                       type="checkbox"
                       id="existingMember-event"
+                      name="ist_mitglied"
                       checked={isExistingMember}
                       onChange={(e) => setIsExistingMember(e.target.checked)}
                       className="mt-1 w-4 h-4 shrink-0 text-[#D4AF37] border-gray-300 rounded focus:ring-[#D4AF37] cursor-pointer accent-[#D4AF37]"
@@ -182,12 +189,13 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                       <label htmlFor="existingMember-event" className="text-xs text-gray-500 cursor-pointer pt-0.5">
                         Ich bin bereits Mitglied im Liberty Powerhouse
                       </label>
-                      <p className="text-xs text-gray-400 leading-relaxed">
-                        Wir hinterlegen die Teilnahme direkt in deinem Profil.
-                      </p>
                     </div>
                   </div>
                 </div>
+                
+                {/* Hidden Fields for the Webhook / Form Payload */}
+                <input type="hidden" name="vortrag_datum" value="06.05.2026" />
+                <input type="hidden" name="vortrag_uhrzeit" value="18:30 Uhr" />
 
                 {status === 'error' && (
                   <p className="text-red-500 text-xs text-center mt-2">

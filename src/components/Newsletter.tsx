@@ -5,10 +5,25 @@ import { useState } from "react";
 export default function Newsletter() {
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (email) setSubmitted(true);
+        if (!email) return;
+        
+        setIsSubmitting(true);
+        try {
+            await fetch("https://drwintergrochollteam.app.n8n.cloud/webhook/newsletter-anmeldung", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email })
+            });
+            setSubmitted(true);
+        } catch (error) {
+            console.error("Submission error:", error);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -39,6 +54,7 @@ export default function Newsletter() {
                         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full">
                             <input
                                 type="email"
+                                name="email"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -47,9 +63,10 @@ export default function Newsletter() {
                             />
                             <button
                                 type="submit"
-                                className="bg-[#D4AF37] hover:bg-[#F1D36C] text-[#1B3660] font-bold text-base px-10 py-4 rounded-xl transition-colors duration-300 shadow-md cursor-pointer whitespace-nowrap"
+                                disabled={isSubmitting}
+                                className={`bg-[#D4AF37] hover:bg-[#F1D36C] text-[#1B3660] font-bold text-base px-10 py-4 rounded-xl transition-colors duration-300 cursor-pointer whitespace-nowrap ${isSubmitting ? 'opacity-70 shadow-none' : 'shadow-md'}`}
                             >
-                                Jetzt anmelden
+                                {isSubmitting ? 'Wird gesendet...' : 'Jetzt anmelden'}
                             </button>
                         </form>
                     )}
