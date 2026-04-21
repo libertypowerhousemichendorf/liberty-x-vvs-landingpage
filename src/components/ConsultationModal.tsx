@@ -29,7 +29,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     };
 
     try {
-      const response = await fetch('https://drwintergrochollteam.app.n8n.cloud/webhook-test/liberty-vvs-lead-intake', {
+      const response = await fetch('https://drwintergrochollteam.app.n8n.cloud/webhook/liberty-vvs-lead-intake', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
