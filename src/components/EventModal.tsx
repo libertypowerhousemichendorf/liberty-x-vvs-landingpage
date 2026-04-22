@@ -27,7 +27,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
       telefon: phone,
       ist_mitglied: isExistingMember,
       vortrag_datum: "06.05.2026",
-      vortrag_uhrzeit: "18:30 Uhr"
+      vortrag_uhrzeit: "18:30"
     };
 
     try {
@@ -195,7 +195,7 @@ export default function EventModal({ isOpen, onClose }: EventModalProps) {
                 
                 {/* Hidden Fields for the Webhook / Form Payload */}
                 <input type="hidden" name="vortrag_datum" value="06.05.2026" />
-                <input type="hidden" name="vortrag_uhrzeit" value="18:30 Uhr" />
+                <input type="hidden" name="vortrag_uhrzeit" value="18:30" />
 
                 {status === 'error' && (
                   <p className="text-red-500 text-xs text-center mt-2">
