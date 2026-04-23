@@ -28,11 +28,44 @@ function CheckoutContent() {
     privacy: false,
     sepa: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission to next step
-    router.push("/vvs-abschluss/bestaetigung");
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    // Hier die Webhook-URL anpassen (z. B. n8n Test-URL oder Production-URL)
+    const webhookUrl = process.env.NEXT_PUBLIC_VVS_CHECKOUT_WEBHOOK || "https://drwintergrochollteam.app.n8n.cloud/webhook/vvs-onboarding-daten";
+
+    try {
+      const payload = {
+        ...formData,
+        plan,
+        planName
+      };
+
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        router.push("/vvs-abschluss/bestaetigung");
+      } else {
+        console.error("Webhook error:", response.status, response.statusText);
+        setSubmitError("Es gab ein Problem bei der Übermittlung. Bitte versuchen Sie es noch einmal.");
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setSubmitError("Es konnte keine Verbindung hergestellt werden. Bitte versuchen Sie es noch einmal.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -208,10 +241,15 @@ function CheckoutContent() {
                </label>
             </div>
 
-            <button type="submit" className="w-full mt-4 py-4 px-6 rounded-xl font-bold text-white bg-[#1B3660] hover:bg-[#152a4a] transition-colors shadow-lg active:scale-[0.98] border border-[#1B3660] relative overflow-hidden group">
-               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-               <div className="flex flex-col items-center">
-                 <span className="text-lg">Kostenpflichtig anmelden & Rabatt aktivieren</span>
+            {submitError && (
+              <div className="w-full mt-4 p-4 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg text-center">
+                {submitError}
+              </div>
+            )}
+            <button disabled={isSubmitting} type="submit" className={`w-full mt-4 py-4 px-6 rounded-xl font-bold text-white transition-colors shadow-lg active:scale-[0.98] border relative overflow-hidden group ${isSubmitting ? 'bg-gray-400 border-gray-400 cursor-not-allowed' : 'bg-[#1B3660] hover:bg-[#152a4a] border-[#1B3660]'}`}>
+               {!isSubmitting && <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />}
+               <div className="flex flex-col items-center relative z-10">
+                 <span className="text-lg">{isSubmitting ? "Wird verarbeitet..." : "Kostenpflichtig anmelden & Rabatt aktivieren"}</span>
                </div>
             </button>
             <div className="w-full text-center mt-4">

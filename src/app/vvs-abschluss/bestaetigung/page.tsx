@@ -64,7 +64,7 @@ export default function VVSConfirmation() {
            </div>
            
            <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-[#1B3660] mb-4">
-             Herzlichen Glückwunsch &amp; Willkommen im Club!
+             Herzlichen Glückwunsch &amp; Willkommen im Liberty Powerhouse!
            </h1>
            <p className="text-lg md:text-xl text-[#1B3660]/80 font-medium max-w-2xl px-4">
              Ihre Anmeldung war erfolgreich. Ihr exklusiver VVS-Vorteilstarif ist nun aktiv.
@@ -81,19 +81,19 @@ export default function VVSConfirmation() {
            <ul className="space-y-5">
              <li className="flex items-start text-left">
                 <svg className="w-6 h-6 text-[#D4AF37] mr-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Ihre Daten wurden sicher an uns übertragen und Ihr Rabatt ist im System fest hinterlegt.</span>
+                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Ihre Vertragsdaten wurden sicher an das Liberty Powerhouse Michendorf übertragen. Ihr exklusiver VVS-Rabatt ist dort bereits fest für Sie in der Mitgliederverwaltung hinterlegt.</span>
              </li>
              <li className="flex items-start text-left">
                 <svg className="w-6 h-6 text-[#D4AF37] mr-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Sie können ab sofort bei uns in Michendorf vorbeikommen und direkt mit dem Training starten. Melden Sie sich bei Ihrem ersten Besuch einfach kurz am Frontdesk.</span>
+                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Sie können ab sofort im Studio in Michendorf vorbeikommen und direkt mit dem Training starten. Melden Sie sich bei Ihrem ersten Besuch einfach kurz am Frontdesk.</span>
              </li>
              <li className="flex items-start text-left">
                 <svg className="w-6 h-6 text-[#D4AF37] mr-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Alle Unterlagen zu Ihrem neuen VVS Strategie-Depot erhalten Sie in Kürze separat durch das Dr. Winter Grocholl Team.</span>
+                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Als Initiator dieser Rabatt-Aktion meldet sich das Dr. Winter Grocholl Team in Kürze separat bei Ihnen mit allen weiteren Unterlagen zur Eröffnung Ihres VVS Strategie-Depots.</span>
              </li>
              <li className="flex items-start text-left">
                 <svg className="w-6 h-6 text-[#D4AF37] mr-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Wir haben Ihnen soeben eine E-Mail mit allen Vertragsdetails sowie dem Link zu unserer Studio-App zugesendet.</span>
+                <span className="text-[#1B3660] text-sm md:text-lg leading-relaxed">Das Liberty Powerhouse Team hat Ihnen soeben eine E-Mail mit allen Vertragsdetails sowie dem Link zur offiziellen Studio-App zugesendet.</span>
              </li>
            </ul>
         </div>
